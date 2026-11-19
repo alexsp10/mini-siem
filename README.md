@@ -54,7 +54,7 @@ flowchart LR
 ## Quick start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/mini-siem.git
+git clone https://github.com/alexsp10/mini-siem.git
 cd mini-siem
 python -m venv .venv
 # Windows: .venv\Scripts\activate    Linux/macOS: source .venv/bin/activate
