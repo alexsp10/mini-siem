@@ -4,7 +4,7 @@ A small, dependency-light SIEM written in Python. It ingests Linux and Windows l
 
 It is built to show the core of what a SOC platform does (parsing, normalisation, correlation, alert triage) and to follow **detection-as-code** practice: every rule is linted in CI, must fire on a recorded attack, and must stay silent on a recorded day of normal activity.
 
-![CI](https://github.com/YOUR_USERNAME/mini-siem/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/alexsp10/mini-siem/actions/workflows/ci.yml/badge.svg)
 
 <!-- Add a screenshot: run the demo below, open report.html, and save a capture as docs/report.png -->
 <!-- ![Dashboard](docs/report.png) -->
