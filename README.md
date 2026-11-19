@@ -6,8 +6,7 @@ It is built to show the core of what a SOC platform does (parsing, normalisation
 
 ![CI](https://github.com/alexsp10/mini-siem/actions/workflows/ci.yml/badge.svg)
 
-<!-- Add a screenshot: run the demo below, open report.html, and save a capture as docs/report.png -->
-<!-- ![Dashboard](docs/report.png) -->
+![Dashboard](docs/report.png)
 
 ## Features
 
