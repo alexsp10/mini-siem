@@ -1,0 +1,18 @@
+id: win-comsvcs-minidump
+title: LSASS dump via comsvcs.dll MiniDump
+status: stable
+author: mini-siem
+description: rundll32 called the MiniDump export of comsvcs.dll, a built-in way to dump process memory (usually LSASS).
+level: critical
+tags: [attack.credential_access, attack.defense_evasion, attack.t1003.001, attack.t1218.011]
+logsource:
+  source: [sysmon, windows_security]
+detection:
+  selection:
+    event.action: process_created
+    process.command_line|contains|all: [comsvcs, minidump]
+  condition: selection
+falsepositives:
+  - None expected
+references:
+  - https://attack.mitre.org/techniques/T1003/001/

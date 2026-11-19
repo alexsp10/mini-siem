@@ -1,0 +1,29 @@
+id: win-suspicious-service
+title: Service installed with a suspicious image path
+status: stable
+author: mini-siem
+description: |
+  A new service (7045) points at cmd, PowerShell or a user-writable folder.
+  PsExec-style lateral movement and many persistence tools do this.
+level: high
+tags: [attack.persistence, attack.privilege_escalation, attack.t1543.003]
+logsource:
+  source: windows_system
+detection:
+  selection:
+    event.code: 7045
+  suspicious:
+    service.image_path|contains:
+      - 'cmd.exe /c'
+      - '%comspec%'
+      - powershell
+      - mshta
+      - rundll32
+      - '\Users\Public\'
+      - '\AppData\'
+      - '\Temp\'
+  condition: selection and suspicious
+falsepositives:
+  - Badly packaged software installing from a temp folder
+references:
+  - https://attack.mitre.org/techniques/T1543/003/

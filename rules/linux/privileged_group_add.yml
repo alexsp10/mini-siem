@@ -1,0 +1,18 @@
+id: lnx-privileged-group-add
+title: User added to a privileged Linux group
+status: stable
+author: mini-siem
+description: An account was added to a group that grants root-equivalent access (sudo, wheel, admin, root, docker).
+level: high
+tags: [attack.persistence, attack.privilege_escalation, attack.t1098]
+logsource:
+  source: linux_auth
+detection:
+  selection:
+    event.action: group_member_added
+    group.name: [sudo, wheel, admin, root, docker, lxd]
+  condition: selection
+falsepositives:
+  - Approved access changes; verify against the change ticket
+references:
+  - https://attack.mitre.org/techniques/T1098/

@@ -1,0 +1,29 @@
+id: win-bruteforce-success
+title: Successful Windows logon after repeated failures
+status: stable
+author: mini-siem
+description: |
+  Five or more failed logons followed by a successful logon from the same
+  source IP within thirty minutes. A guessed password is likely.
+level: critical
+tags: [attack.credential_access, attack.initial_access, attack.t1110, attack.t1078]
+logsource:
+  source: windows_security
+detection:
+  failed:
+    event.code: 4625
+    source.ip|exists: true
+  success:
+    event.code: 4624
+    source.ip|exists: true
+sequence:
+  group_by: [source.ip]
+  timeframe: 30m
+  steps:
+    - selection: failed
+      count: 5
+    - selection: success
+falsepositives:
+  - A user mistyping their password several times before succeeding
+references:
+  - https://attack.mitre.org/techniques/T1078/

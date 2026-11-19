@@ -1,0 +1,21 @@
+id: win-logon-bruteforce
+title: Windows logon brute force
+status: stable
+author: mini-siem
+description: Eight or more failed logons (4625) against one host from the same source IP within five minutes.
+level: medium
+tags: [attack.credential_access, attack.t1110.001]
+logsource:
+  source: windows_security
+detection:
+  selection:
+    event.code: 4625
+  condition: selection
+threshold:
+  count: 8
+  timeframe: 5m
+  group_by: [host.name, source.ip]
+falsepositives:
+  - A mapped drive or service still using an old password
+references:
+  - https://attack.mitre.org/techniques/T1110/001/

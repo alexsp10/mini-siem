@@ -1,0 +1,32 @@
+id: win-lsass-access
+title: Suspicious access to LSASS memory
+status: stable
+author: mini-siem
+description: |
+  A process opened lsass.exe with memory-read access rights typical of
+  credential dumpers (Mimikatz, ProcDump and similar). Defender and core
+  system processes are filtered out by full path, not just by name, so a
+  renamed binary cannot hide behind a trusted name.
+level: critical
+tags: [attack.credential_access, attack.t1003.001]
+logsource:
+  source: sysmon
+detection:
+  selection:
+    event.action: process_access
+    target.process.name: lsass.exe
+    access.granted: ['0x1010', '0x1410', '0x1438', '0x143a', '0x1fffff', '0x1f3fff']
+  filter_defender:
+    process.executable|startswith:
+      - 'C:\ProgramData\Microsoft\Windows Defender\Platform\'
+      - 'C:\Program Files\Windows Defender\'
+  filter_system:
+    process.executable:
+      - 'C:\Windows\System32\csrss.exe'
+      - 'C:\Windows\System32\wininit.exe'
+      - 'C:\Windows\System32\wbem\WmiPrvSE.exe'
+  condition: selection and not 1 of filter_*
+falsepositives:
+  - Other EDR or backup agents; add them to a filter by full path
+references:
+  - https://attack.mitre.org/techniques/T1003/001/

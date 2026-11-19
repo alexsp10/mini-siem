@@ -1,0 +1,17 @@
+id: win-log-cleared
+title: Windows event log cleared
+status: stable
+author: mini-siem
+description: The Security (1102) or System (104) event log was cleared, usually to hide earlier activity.
+level: high
+tags: [attack.defense_evasion, attack.t1070.001]
+logsource:
+  source: [windows_security, windows_system]
+detection:
+  selection:
+    event.action: log_cleared
+  condition: selection
+falsepositives:
+  - Rare; some build or imaging scripts clear logs before sysprep
+references:
+  - https://attack.mitre.org/techniques/T1070/001/

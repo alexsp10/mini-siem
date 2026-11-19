@@ -1,0 +1,22 @@
+id: win-encoded-powershell
+title: PowerShell with an encoded command
+status: stable
+author: mini-siem
+description: |
+  PowerShell was started with -EncodedCommand (or any accepted abbreviation)
+  followed by a base64 blob. Malware uses this to hide the real script.
+level: high
+tags: [attack.execution, attack.defense_evasion, attack.t1059.001, attack.t1027]
+logsource:
+  source: [sysmon, windows_security]
+detection:
+  selection:
+    event.action: process_created
+    process.name: [powershell.exe, pwsh.exe]
+  encoded:
+    process.command_line|re: '\s[-/](e|ec|en|enc|enco|encod|encode|encoded|encodedc|encodedco|encodedcom|encodedcomm|encodedcomma|encodedcomman|encodedcommand)\s+[a-z0-9+/=]{20,}'
+  condition: selection and encoded
+falsepositives:
+  - Some management agents (SCCM, Intune scripts) use encoded commands; baseline them by parent process
+references:
+  - https://attack.mitre.org/techniques/T1059/001/

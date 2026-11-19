@@ -1,0 +1,21 @@
+id: lnx-sudo-unauthorized
+title: Unauthorised sudo attempt
+status: stable
+author: mini-siem
+description: |
+  sudo was refused because the user is not in sudoers or entered the wrong
+  password too many times. Service accounts such as www-data trying sudo often
+  means a web shell is in use.
+level: medium
+tags: [attack.privilege_escalation, attack.t1548.003]
+logsource:
+  source: linux_auth
+detection:
+  selection:
+    event.action: sudo_command
+    event.outcome: failure
+  condition: selection
+falsepositives:
+  - A new team member who has not been granted sudo yet
+references:
+  - https://attack.mitre.org/techniques/T1548/003/

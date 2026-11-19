@@ -1,0 +1,31 @@
+id: win-office-spawns-shell
+title: Office application spawned a shell or script host
+status: stable
+author: mini-siem
+description: |
+  Word, Excel, PowerPoint or Outlook started cmd, PowerShell, a script host or
+  a LOLBin. This is the classic behaviour of a malicious macro document.
+level: high
+tags: [attack.initial_access, attack.execution, attack.t1566.001, attack.t1204.002]
+logsource:
+  source: [sysmon, windows_security]
+detection:
+  selection:
+    event.action: process_created
+    process.parent.name: [winword.exe, excel.exe, powerpnt.exe, outlook.exe, msaccess.exe, mspub.exe, onenote.exe]
+    process.name:
+      - cmd.exe
+      - powershell.exe
+      - pwsh.exe
+      - wscript.exe
+      - cscript.exe
+      - mshta.exe
+      - rundll32.exe
+      - regsvr32.exe
+      - certutil.exe
+      - bitsadmin.exe
+  condition: selection
+falsepositives:
+  - Legitimate add-ins that shell out; whitelist by command line after review
+references:
+  - https://attack.mitre.org/techniques/T1566/001/

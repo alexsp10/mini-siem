@@ -1,0 +1,21 @@
+id: lnx-sudo-root-shell
+title: Interactive root shell via sudo
+status: stable
+author: mini-siem
+description: A user ran an interactive shell as root through sudo instead of a specific command.
+level: medium
+tags: [attack.privilege_escalation, attack.t1548.003]
+logsource:
+  source: linux_auth
+detection:
+  selection:
+    event.action: sudo_command
+    event.outcome: success
+    user.target.name: root
+  shell:
+    process.command_line|re: '(^|/)(ba|z|da|k)?sh(\s+-[il])?$|(^|/)su(\s+-l?)?$'
+  condition: selection and shell
+falsepositives:
+  - Administrators who habitually use "sudo -i" or "sudo su"
+references:
+  - https://attack.mitre.org/techniques/T1548/003/

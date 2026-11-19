@@ -1,0 +1,17 @@
+id: lnx-user-created
+title: Local user account created
+status: stable
+author: mini-siem
+description: A new local account was created with useradd. Attackers add accounts for persistence.
+level: medium
+tags: [attack.persistence, attack.t1136.001]
+logsource:
+  source: linux_auth
+detection:
+  selection:
+    event.action: user_created
+  condition: selection
+falsepositives:
+  - Planned onboarding or package installs that create service users
+references:
+  - https://attack.mitre.org/techniques/T1136/001/

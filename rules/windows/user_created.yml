@@ -1,0 +1,17 @@
+id: win-user-created
+title: Windows user account created
+status: stable
+author: mini-siem
+description: A user account was created (4720). Attackers create accounts to keep access.
+level: medium
+tags: [attack.persistence, attack.t1136.001, attack.t1136.002]
+logsource:
+  source: windows_security
+detection:
+  selection:
+    event.code: 4720
+  condition: selection
+falsepositives:
+  - Normal account provisioning by the service desk
+references:
+  - https://attack.mitre.org/techniques/T1136/

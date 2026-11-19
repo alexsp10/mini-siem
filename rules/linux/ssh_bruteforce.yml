@@ -1,0 +1,22 @@
+id: lnx-ssh-bruteforce
+title: SSH brute force from a single source
+status: stable
+author: mini-siem
+description: Five or more failed SSH logins from the same source IP within five minutes.
+level: medium
+tags: [attack.credential_access, attack.t1110.001]
+logsource:
+  source: linux_auth
+detection:
+  selection:
+    event.action: ssh_login
+    event.outcome: failure
+  condition: selection
+threshold:
+  count: 5
+  timeframe: 5m
+  group_by: [source.ip]
+falsepositives:
+  - Automation or a monitoring probe retrying with a stale password
+references:
+  - https://attack.mitre.org/techniques/T1110/001/

@@ -1,0 +1,207 @@
+Nov 18 08:00:00 web01 CRON[3100]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 08:00:00 db01 CRON[6662]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 08:07:56 db01 sshd[8097]: Accepted publickey for carol from 10.0.0.21 port 53831 ssh2: RSA SHA256:hOwc8fjOWOrOwd8S7Ba16j7pGLou3SHvV5utg79bg16
+Nov 18 08:07:57 db01 sshd[8097]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 08:24:33 db01 sshd[13889]: Accepted publickey for carol from 10.0.0.21 port 59300 ssh2: RSA SHA256:ePvzZaqLXj4sxrvXFcqgGxKh1ZXfuBeCTt2nllZpKKg
+Nov 18 08:24:34 db01 sshd[13889]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 08:26:33 db01 sudo[18682]:    carol : TTY=pts/1 ; PWD=/home/carol ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 18 08:30:00 web01 CRON[8942]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 08:30:00 db01 CRON[8572]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 08:32:56 db01 sshd[8097]: pam_unix(sshd:session): session closed for user carol
+Nov 18 08:47:55 db01 sshd[9823]: Accepted publickey for bob from 10.0.0.15 port 61601 ssh2: RSA SHA256:9uAYy20948vgzIhxjNb8De3XkjM8gaf0WaWAiinynVd
+Nov 18 08:47:56 db01 sshd[9823]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 08:55:33 db01 sshd[13889]: pam_unix(sshd:session): session closed for user carol
+Nov 18 09:00:00 web01 CRON[8256]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 09:00:00 db01 CRON[2516]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 09:00:30 web01 sshd[27163]: Accepted publickey for alice from 10.0.0.12 port 58056 ssh2: RSA SHA256:07QC18rEF3BcAwwRPRHznLWSEKKQh8KqRptSdsUfeHB
+Nov 18 09:00:31 web01 sshd[27163]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)
+Nov 18 09:04:30 web01 sudo[27089]:    alice : TTY=pts/1 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx --since today
+Nov 18 09:07:55 db01 sshd[9823]: pam_unix(sshd:session): session closed for user bob
+Nov 18 09:10:46 web01 sshd[15144]: Accepted publickey for carol from 10.0.0.21 port 40682 ssh2: RSA SHA256:ZJCu9Kctgrbi1OozshcOhpBZrkzUqobDvTI9N4DTE2E
+Nov 18 09:10:47 web01 sshd[15144]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 09:12:46 web01 sudo[14637]:    carol : TTY=pts/2 ; PWD=/home/carol ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx --since today
+Nov 18 09:18:21 web01 sshd[27850]: Accepted publickey for carol from 10.0.0.21 port 47130 ssh2: RSA SHA256:kdK033xtngCYMWGNkr5blMfG8qYSgfBUn3Z5SBKM2Uz
+Nov 18 09:18:22 web01 sshd[27850]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 09:22:30 web01 sshd[27163]: pam_unix(sshd:session): session closed for user alice
+Nov 18 09:24:46 web01 sshd[15144]: pam_unix(sshd:session): session closed for user carol
+Nov 18 09:30:00 web01 CRON[4089]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 09:30:00 db01 CRON[2965]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 09:32:21 web01 sshd[27850]: pam_unix(sshd:session): session closed for user carol
+Nov 18 09:35:48 web01 sshd[23100]: Accepted publickey for bob from 10.0.0.15 port 43159 ssh2: RSA SHA256:7jW641rifxiPEuCFIKK6iNRwVmg1QXVVHSP38mx9t4f
+Nov 18 09:35:49 web01 sshd[23100]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 09:38:48 web01 sudo[2282]:    bob : TTY=pts/3 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 18 09:45:48 web01 sshd[23100]: pam_unix(sshd:session): session closed for user bob
+Nov 18 09:55:43 web01 sshd[12170]: Accepted publickey for alice from 10.0.0.12 port 43758 ssh2: RSA SHA256:y7YEkjOkF8RX5Ski7Hd5RGyC0SAnqAFaH04yCMPylaK
+Nov 18 09:55:44 web01 sshd[12170]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)
+Nov 18 09:57:43 web01 sudo[6208]:    alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 18 10:00:00 web01 CRON[6058]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 10:00:00 db01 CRON[8233]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 10:15:34 db01 sshd[9303]: Accepted publickey for carol from 10.0.0.21 port 63318 ssh2: RSA SHA256:GNpUCBAy7SumUcZUZEE6UmdHQNynx5i3seqWQLiNTMP
+Nov 18 10:15:35 db01 sshd[9303]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 10:16:34 db01 sudo[25683]:    carol : TTY=pts/3 ; PWD=/home/carol ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx --since today
+Nov 18 10:26:34 db01 sshd[9303]: pam_unix(sshd:session): session closed for user carol
+Nov 18 10:28:43 web01 sshd[12170]: pam_unix(sshd:session): session closed for user alice
+Nov 18 10:30:00 web01 CRON[5682]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 10:30:00 db01 CRON[5868]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 10:41:15 db01 sshd[13795]: Failed password for alice from 10.0.0.12 port 50052 ssh2
+Nov 18 10:41:20 db01 sshd[13795]: Accepted password for alice from 10.0.0.12 port 50052 ssh2
+Nov 18 10:41:21 db01 sshd[13795]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)
+Nov 18 10:43:20 db01 sudo[11955]:    alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx --since today
+Nov 18 11:00:00 web01 CRON[7337]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 11:00:00 db01 CRON[5109]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 11:07:11 web01 sshd[8214]: Accepted publickey for alice from 10.0.0.12 port 40667 ssh2: RSA SHA256:ZERj3EuEBoASwyWfe32JGgxyUEg8qLLxJJ03UTGtg16
+Nov 18 11:07:12 web01 sshd[8214]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)
+Nov 18 11:20:20 web01 sshd[27903]: Accepted publickey for bob from 10.0.0.15 port 60431 ssh2: RSA SHA256:6j18vsNLTbiKDt3qPQxEr9czbjQic2idAZ1VKQfByp7
+Nov 18 11:20:21 web01 sshd[27903]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 11:21:11 web01 sshd[8214]: pam_unix(sshd:session): session closed for user alice
+Nov 18 11:21:20 db01 sshd[13795]: pam_unix(sshd:session): session closed for user alice
+Nov 18 11:27:20 web01 sshd[27903]: pam_unix(sshd:session): session closed for user bob
+Nov 18 11:29:04 db01 sshd[5531]: Failed password for carol from 10.0.0.21 port 59449 ssh2
+Nov 18 11:29:11 db01 sshd[5531]: Accepted password for carol from 10.0.0.21 port 59449 ssh2
+Nov 18 11:29:12 db01 sshd[5531]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 11:30:00 web01 CRON[8461]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 11:30:00 db01 CRON[3719]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 11:48:47 db01 sshd[21068]: Accepted publickey for alice from 10.0.0.12 port 42924 ssh2: RSA SHA256:ALhUg5p6c7rouOPUfre9OtaVjn6u6pRpOD6Ewgp4XKg
+Nov 18 11:48:48 db01 sshd[21068]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)
+Nov 18 11:52:11 db01 sshd[5531]: pam_unix(sshd:session): session closed for user carol
+Nov 18 12:00:00 web01 CRON[2768]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 12:00:00 db01 CRON[5996]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 12:05:06 db01 sshd[13177]: Accepted publickey for carol from 10.0.0.21 port 45412 ssh2: RSA SHA256:vdmF2H5m9gkYLJQbN8kuwyDfrZtoWYg2KiuChFzQoGR
+Nov 18 12:05:07 db01 sshd[13177]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 12:07:47 db01 sshd[21068]: pam_unix(sshd:session): session closed for user alice
+Nov 18 12:16:06 db01 sshd[13177]: pam_unix(sshd:session): session closed for user carol
+Nov 18 12:16:55 web01 sshd[28884]: Accepted publickey for bob from 10.0.0.15 port 47896 ssh2: RSA SHA256:Y8z5bZK6UcIn6f9NHbmia6HqSRPYvjA9MhclBBomP1Q
+Nov 18 12:16:56 web01 sshd[28884]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 12:18:55 web01 sudo[18771]:    bob : TTY=pts/1 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx --since today
+Nov 18 12:30:00 web01 CRON[2232]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 12:30:00 db01 CRON[8846]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 12:33:32 db01 sshd[15627]: Accepted publickey for carol from 10.0.0.21 port 45504 ssh2: RSA SHA256:fa2HxNk4YNSzG5zBHkvAiS9rwupIEgXkzTbgrWwhUAH
+Nov 18 12:33:33 db01 sshd[15627]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 12:39:55 web01 sshd[28884]: pam_unix(sshd:session): session closed for user bob
+Nov 18 12:41:07 web01 sudo[14211]: www-data : user NOT in sudoers ; TTY=unknown ; PWD=/var/www/html ; USER=root ; COMMAND=/bin/sh
+Nov 18 12:51:51 db01 sshd[26660]: Accepted publickey for bob from 10.0.0.15 port 63957 ssh2: RSA SHA256:fHp6YYNjARomu4v1ugM7dm1ha7vtTsKcnqhMXhArYlb
+Nov 18 12:51:52 db01 sshd[26660]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 13:00:00 web01 CRON[5193]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 13:00:00 db01 CRON[5545]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 13:02:11 web01 sshd[22841]: Invalid user admin from 203.0.113.45 port 41853
+Nov 18 13:02:12 web01 sshd[22841]: Failed password for invalid user admin from 203.0.113.45 port 41853 ssh2
+Nov 18 13:02:15 web01 sshd[22842]: Invalid user test from 203.0.113.45 port 42781
+Nov 18 13:02:16 web01 sshd[22842]: Failed password for invalid user test from 203.0.113.45 port 42781 ssh2
+Nov 18 13:02:21 web01 sshd[22843]: Invalid user oracle from 203.0.113.45 port 45540
+Nov 18 13:02:22 web01 sshd[22843]: Failed password for invalid user oracle from 203.0.113.45 port 45540 ssh2
+Nov 18 13:02:30 web01 sshd[22844]: Invalid user ubuntu from 203.0.113.45 port 61945
+Nov 18 13:02:31 web01 sshd[22844]: Failed password for invalid user ubuntu from 203.0.113.45 port 61945 ssh2
+Nov 18 13:02:36 web01 sshd[22845]: Invalid user guest from 203.0.113.45 port 48243
+Nov 18 13:02:37 web01 sshd[22845]: Failed password for invalid user guest from 203.0.113.45 port 48243 ssh2
+Nov 18 13:02:44 web01 sshd[22846]: Invalid user pi from 203.0.113.45 port 46953
+Nov 18 13:02:45 web01 sshd[22846]: Failed password for invalid user pi from 203.0.113.45 port 46953 ssh2
+Nov 18 13:02:52 web01 sshd[22847]: Failed password for root from 203.0.113.45 port 41170 ssh2
+Nov 18 13:02:58 web01 sshd[22848]: Failed password for root from 203.0.113.45 port 62323 ssh2
+Nov 18 13:03:01 web01 sshd[22849]: Failed password for root from 203.0.113.45 port 54112 ssh2
+Nov 18 13:03:06 web01 sshd[22850]: Failed password for root from 203.0.113.45 port 63691 ssh2
+Nov 18 13:03:12 web01 sshd[22851]: Failed password for root from 203.0.113.45 port 52191 ssh2
+Nov 18 13:03:18 web01 sshd[22852]: Failed password for root from 203.0.113.45 port 54576 ssh2
+Nov 18 13:03:24 web01 sshd[22853]: Failed password for root from 203.0.113.45 port 48789 ssh2
+Nov 18 13:03:26 web01 sshd[22854]: Failed password for root from 203.0.113.45 port 40899 ssh2
+Nov 18 13:03:30 web01 sshd[22855]: Failed password for root from 203.0.113.45 port 55233 ssh2
+Nov 18 13:03:34 web01 sshd[22856]: Failed password for root from 203.0.113.45 port 52452 ssh2
+Nov 18 13:03:39 web01 sshd[22857]: Failed password for root from 203.0.113.45 port 57227 ssh2
+Nov 18 13:03:42 web01 sshd[22858]: Failed password for root from 203.0.113.45 port 58366 ssh2
+Nov 18 13:03:45 web01 sshd[22859]: Failed password for deploy from 203.0.113.45 port 47737 ssh2
+Nov 18 13:03:48 web01 sshd[22860]: Failed password for deploy from 203.0.113.45 port 40781 ssh2
+Nov 18 13:03:51 web01 sshd[22861]: Failed password for deploy from 203.0.113.45 port 50654 ssh2
+Nov 18 13:03:54 web01 sshd[22862]: Failed password for deploy from 203.0.113.45 port 44479 ssh2
+Nov 18 13:04:00 web01 sshd[22863]: Failed password for deploy from 203.0.113.45 port 56719 ssh2
+Nov 18 13:04:04 web01 sshd[22864]: Failed password for deploy from 203.0.113.45 port 56834 ssh2
+Nov 18 13:04:10 web01 sshd[22865]: Accepted password for deploy from 203.0.113.45 port 45958 ssh2
+Nov 18 13:04:11 web01 sshd[22865]: pam_unix(sshd:session): session opened for user deploy(uid=1005) by (uid=0)
+Nov 18 13:06:24 web01 sudo[23090]:   deploy : TTY=pts/1 ; PWD=/home/deploy ; USER=root ; COMMAND=/bin/bash
+Nov 18 13:07:05 web01 useradd[23131]: new user: name=sysupdate, UID=1002, GID=1002, home=/home/sysupdate, shell=/bin/bash, from=/dev/pts/1
+Nov 18 13:07:11 web01 usermod[23140]: add 'sysupdate' to group 'sudo'
+Nov 18 13:07:32 db01 sshd[15627]: pam_unix(sshd:session): session closed for user carol
+Nov 18 13:17:37 web01 sshd[25437]: Accepted publickey for bob from 10.0.0.15 port 48114 ssh2: RSA SHA256:pSoBauoJox7ZyR2LxE0xmAW6Qzta3riTJd1QfKdgCRg
+Nov 18 13:17:38 web01 sshd[25437]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 13:18:37 web01 sudo[12638]:    bob : TTY=pts/0 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/tail -n 100 /var/log/syslog
+Nov 18 13:18:51 db01 sshd[26660]: pam_unix(sshd:session): session closed for user bob
+Nov 18 13:24:47 web01 sshd[4049]: Accepted publickey for carol from 10.0.0.21 port 53170 ssh2: RSA SHA256:RmTNhNP4VREEs16hqXdgjvDKTpvt0jRWnvOZjZLeyQ3
+Nov 18 13:24:48 web01 sshd[4049]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 13:30:00 web01 CRON[6976]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 13:30:00 db01 CRON[8244]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 13:40:26 web01 sshd[2000]: Accepted publickey for carol from 10.0.0.21 port 60396 ssh2: RSA SHA256:7b7wPyRMEouK3lcl67uJm8QdhKIxI5tcXTwZPHtNtrT
+Nov 18 13:40:27 web01 sshd[2000]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 13:44:26 web01 sudo[11530]:    carol : TTY=pts/3 ; PWD=/home/carol ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 18 13:44:47 web01 sshd[4049]: pam_unix(sshd:session): session closed for user carol
+Nov 18 13:51:37 web01 sshd[25437]: pam_unix(sshd:session): session closed for user bob
+Nov 18 13:52:26 web01 sshd[2000]: pam_unix(sshd:session): session closed for user carol
+Nov 18 13:52:28 web01 sshd[1762]: Accepted publickey for carol from 10.0.0.21 port 64655 ssh2: RSA SHA256:Cfth0u94ncVq1RHnsLGOZOfcYwKOP0SdjlYNctQVflH
+Nov 18 13:52:29 web01 sshd[1762]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 14:00:00 web01 CRON[8284]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 14:00:00 db01 CRON[2017]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 14:00:28 web01 sshd[11471]: Accepted publickey for bob from 10.0.0.15 port 52554 ssh2: RSA SHA256:S6MZK40wpJy6BAYJ4qiDkYQIFdp1T5ACiDh1IC7RxHb
+Nov 18 14:00:29 web01 sshd[11471]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 14:03:28 web01 sshd[1762]: pam_unix(sshd:session): session closed for user carol
+Nov 18 14:04:28 web01 sudo[21890]:    bob : TTY=pts/1 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 18 14:14:10 db01 sshd[11807]: Accepted publickey for bob from 10.0.0.15 port 60678 ssh2: RSA SHA256:QpoPPDl7ylLWbmsjohD5WjaiMt4ib6qEtRvnuwEQLGJ
+Nov 18 14:14:11 db01 sshd[11807]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 14:18:10 db01 sudo[28923]:    bob : TTY=pts/0 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 18 14:23:10 db01 sshd[11807]: pam_unix(sshd:session): session closed for user bob
+Nov 18 14:23:28 web01 sshd[11471]: pam_unix(sshd:session): session closed for user bob
+Nov 18 14:24:08 db01 sshd[13132]: Accepted publickey for carol from 10.0.0.21 port 43253 ssh2: RSA SHA256:CIiCcqI5Zwt54cBvhRFQzUFTC3YDuQUvIQyYzH2rTGb
+Nov 18 14:24:09 db01 sshd[13132]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 14:30:00 web01 CRON[7700]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 14:30:00 db01 CRON[5648]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 14:48:21 db01 sshd[17689]: Accepted publickey for bob from 10.0.0.15 port 52815 ssh2: RSA SHA256:leGIp0chju21lshiB51SvKMXYhUGaWIkECT0zpiUaTU
+Nov 18 14:48:22 db01 sshd[17689]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 14:53:21 db01 sudo[17418]:    bob : TTY=pts/0 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx --since today
+Nov 18 14:58:30 db01 sshd[11668]: Accepted publickey for carol from 10.0.0.21 port 50733 ssh2: RSA SHA256:cRed6X7vY047F7lzDIDhfk2QyPskvVX8zpXZTdmVigK
+Nov 18 14:58:31 db01 sshd[11668]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 15:00:00 web01 CRON[4181]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 15:00:00 db01 CRON[7910]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 15:00:30 db01 sudo[19441]:    carol : TTY=pts/1 ; PWD=/home/carol ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx --since today
+Nov 18 15:02:08 db01 sshd[13132]: pam_unix(sshd:session): session closed for user carol
+Nov 18 15:11:19 db01 sshd[21306]: Accepted publickey for carol from 10.0.0.21 port 41641 ssh2: RSA SHA256:irRtGNQEokhpF2Ey2Np1Lg3bBlX52ftzSO5Mmf355Pb
+Nov 18 15:11:20 db01 sshd[21306]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 15:11:30 db01 sshd[11668]: pam_unix(sshd:session): session closed for user carol
+Nov 18 15:27:21 db01 sshd[17689]: pam_unix(sshd:session): session closed for user bob
+Nov 18 15:30:00 web01 CRON[8568]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 15:30:00 db01 CRON[3874]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 15:36:17 web01 sshd[24783]: Accepted publickey for bob from 10.0.0.15 port 42382 ssh2: RSA SHA256:QaMAvixYg4fEZn4gyllbCW2dAM9TsspAiH0Tg4vUxip
+Nov 18 15:36:18 web01 sshd[24783]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 15:40:19 db01 sshd[21306]: pam_unix(sshd:session): session closed for user carol
+Nov 18 15:59:43 db01 sshd[21642]: Accepted publickey for carol from 10.0.0.21 port 59040 ssh2: RSA SHA256:TIgclIjxKQoAbvqkCXaZS7q5wqB5F7F2AYRdRyyXov2
+Nov 18 15:59:44 db01 sshd[21642]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 16:00:00 web01 CRON[6842]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 16:00:00 db01 CRON[2837]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 16:00:17 web01 sshd[24783]: pam_unix(sshd:session): session closed for user bob
+Nov 18 16:19:12 web01 sshd[12616]: Accepted publickey for bob from 10.0.0.15 port 44741 ssh2: RSA SHA256:BL0QX2IlyS8aQ8gSvasRbVx6fNt1f8ZtbFEIN9JOuBG
+Nov 18 16:19:13 web01 sshd[12616]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 16:20:12 web01 sudo[14078]:    bob : TTY=pts/1 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/tail -n 100 /var/log/syslog
+Nov 18 16:25:12 web01 sshd[12616]: pam_unix(sshd:session): session closed for user bob
+Nov 18 16:26:43 db01 sshd[21642]: pam_unix(sshd:session): session closed for user carol
+Nov 18 16:28:39 web01 sshd[8152]: Accepted publickey for carol from 10.0.0.21 port 57514 ssh2: RSA SHA256:D8p7Gvjra1qvHQrRLezyt2DyNrpF3YHqcSrgf5ZHm2e
+Nov 18 16:28:40 web01 sshd[8152]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 16:30:00 web01 CRON[4600]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 16:30:00 db01 CRON[2250]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 16:33:39 web01 sudo[24015]:    carol : TTY=pts/1 ; PWD=/home/carol ; USER=root ; COMMAND=/usr/bin/tail -n 100 /var/log/syslog
+Nov 18 16:44:39 web01 sshd[8152]: pam_unix(sshd:session): session closed for user carol
+Nov 18 16:51:55 db01 sshd[18587]: Accepted publickey for carol from 10.0.0.21 port 49456 ssh2: RSA SHA256:o5zi6NywnV3fGAwuqW749tRDiocTw51GOgRRtPaJIQM
+Nov 18 16:51:56 db01 sshd[18587]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 17:00:00 web01 CRON[2182]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 17:00:00 db01 CRON[2208]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 17:00:55 db01 sshd[18587]: pam_unix(sshd:session): session closed for user carol
+Nov 18 17:16:48 web01 sshd[9852]: Accepted publickey for bob from 10.0.0.15 port 49168 ssh2: RSA SHA256:TRfNfXmePVLmwLv4lsciJDgUhsIpwz5NUnfeVHI4IsQ
+Nov 18 17:16:49 web01 sshd[9852]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 17:21:48 web01 sudo[6638]:    bob : TTY=pts/0 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 18 17:30:00 web01 CRON[7321]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 17:30:00 db01 CRON[6435]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 17:36:48 web01 sshd[9852]: pam_unix(sshd:session): session closed for user bob
+Nov 18 17:42:00 db01 sshd[11736]: Accepted publickey for bob from 10.0.0.15 port 40138 ssh2: RSA SHA256:0T0nOFvORro3VRmuhYBHVWIHQ5xJrkCWEFuGTUPRhDX
+Nov 18 17:42:01 db01 sshd[11736]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 17:46:00 db01 sudo[13191]:    bob : TTY=pts/1 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 18 17:54:00 db01 sshd[11736]: pam_unix(sshd:session): session closed for user bob
+Nov 18 17:59:17 web01 sshd[11545]: Accepted publickey for carol from 10.0.0.21 port 43676 ssh2: RSA SHA256:zypu1Im73RZFrknuhekai7ZT5OoTjIDmgHLPN5bRiBQ
+Nov 18 17:59:18 web01 sshd[11545]: pam_unix(sshd:session): session opened for user carol(uid=1003) by (uid=0)
+Nov 18 18:14:47 web01 sshd[24228]: Accepted publickey for bob from 10.0.0.15 port 43399 ssh2: RSA SHA256:EpiXij2zugrlBnTcrIJE6lJr40Ne1z2xVX4SKJ2yY1c
+Nov 18 18:14:48 web01 sshd[24228]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+Nov 18 18:29:47 web01 sshd[24228]: pam_unix(sshd:session): session closed for user bob
+Nov 18 18:38:17 web01 sshd[11545]: pam_unix(sshd:session): session closed for user carol

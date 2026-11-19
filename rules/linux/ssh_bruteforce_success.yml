@@ -1,0 +1,30 @@
+id: lnx-ssh-bruteforce-success
+title: Successful SSH login after brute force
+status: stable
+author: mini-siem
+description: |
+  Five or more failed SSH logins followed by a successful login from the same
+  source IP within fifteen minutes. The attacker probably guessed a valid
+  password; treat the account as compromised.
+level: critical
+tags: [attack.credential_access, attack.initial_access, attack.t1110, attack.t1078]
+logsource:
+  source: linux_auth
+detection:
+  failed:
+    event.action: ssh_login
+    event.outcome: failure
+  success:
+    event.action: ssh_login
+    event.outcome: success
+sequence:
+  group_by: [source.ip]
+  timeframe: 15m
+  steps:
+    - selection: failed
+      count: 5
+    - selection: success
+falsepositives:
+  - A user who forgot their password several times before getting it right
+references:
+  - https://attack.mitre.org/techniques/T1078/

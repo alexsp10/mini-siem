@@ -1,0 +1,27 @@
+id: win-suspicious-scheduled-task
+title: Scheduled task created with a suspicious action
+status: stable
+author: mini-siem
+description: A scheduled task (4698) was registered that runs a shell, script host or a binary from a user-writable folder.
+level: high
+tags: [attack.persistence, attack.execution, attack.t1053.005]
+logsource:
+  source: windows_security
+detection:
+  selection:
+    event.code: 4698
+  suspicious:
+    task.content|contains:
+      - powershell
+      - cmd.exe
+      - mshta
+      - rundll32
+      - wscript
+      - '\Users\Public\'
+      - '\AppData\'
+      - '\Temp\'
+  condition: selection and suspicious
+falsepositives:
+  - Admin maintenance scripts run by PowerShell; whitelist by task name
+references:
+  - https://attack.mitre.org/techniques/T1053/005/

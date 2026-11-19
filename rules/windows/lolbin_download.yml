@@ -1,0 +1,23 @@
+id: win-lolbin-download
+title: File download with a built-in Windows binary
+status: stable
+author: mini-siem
+description: certutil or bitsadmin was used to download a file, a common way to bring tools onto a host.
+level: medium
+tags: [attack.command_and_control, attack.t1105]
+logsource:
+  source: [sysmon, windows_security]
+detection:
+  selection_certutil:
+    event.action: process_created
+    process.name: certutil.exe
+    process.command_line|contains: [urlcache, verifyctl]
+  selection_bitsadmin:
+    event.action: process_created
+    process.name: bitsadmin.exe
+    process.command_line|contains: /transfer
+  condition: 1 of selection_*
+falsepositives:
+  - Some installers use bitsadmin; check the URL and destination
+references:
+  - https://attack.mitre.org/techniques/T1105/
